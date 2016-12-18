@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手写demo1</title>
+    <link rel="stylesheet" href="Source/lib/ligerUI/skins/Aqua/css/ligerui-all.css">
+    <script type="text/javascript" src="Source/lib/jquery/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="Source/lib/ligerUI/js/ligerui.min.js"></script>
+</head>
+<body>
+<!--建立一个表格的盒子-->
+<div id="biaoge" style="height:200px; overflow:scroll;"></div>
+<script type="text/javascript">
+    //    创建数据
+    //    var griddata=[
+    //        {id:"01",name:"部门1"},
+    //        {id:"02",name:"部门2"},
+    //        {id:"03",name:"部门3"},
+    //        {id:"04",name:"部门4"},
+    //        {id:"05",name:"部门5"},
+    //        {id:"06",name:"部门6"},
+    //        {id:"07",name:"部门7"},
+    //    ];
+    //使用liger grid
+    var grid = $("#biaoge").ligerGrid({
+//        参数配置
+        columns: [
+            {name: 'id', display: '序号', width: '300',},
+            {name: 'name', display: '部门', width: '30'},
+            {name: 'name', display: '部门', width: '300'},
+            {name: 'name', display: '部门', width: '300'},
+            {name: 'name', display: '部门', width: '300'},
+            {name: 'name', display: '部门', width: '300'},
+            {name: 'name', display: '部门', width: '300'},
+            {name: 'name', display: '部门', width: '300'},
+            {name: 'name', display: '部门', width: '300'},
+            {name: 'name', display: '部门', width: '300'},
+            {name: 'name', display: '部门', width: '300'},
+            {name: 'name', display: '部门', width: '300'},
+        ],
+//        数据数组Rows
+        data: {
+            Rows: [
+                {id: "01", name: "部门1"},
+                {id: "02", name: "部门2"},
+                {id: "06", name: "部门6"},
+                {id: "05", name: "部门5"},
+                {id: "03", name: "部门3"},
+                {id: "04", name: "部门4"},
+                {id: "07", name: "部门7"},
+            ]
+        }
+
+
+    });
+
+
+</script>
+</body>
+</html>

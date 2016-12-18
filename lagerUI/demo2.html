@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo2</title>
+    <link href="Source/lib/ligerUI/skins/Aqua/css/ligerui-all.css" rel="stylesheet" type="text/css"/>
+    <script src="Source/lib/jquery/jquery-1.5.2.min.js" type="text/javascript"></script>
+    <script src="Source/lib/ligerUI/js/ligerui.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="maingrid"></div>
+<script type="text/javascript">
+    var griddata = [
+        {id: '01', name: '部门01'},
+        {id: '02', name: '部门02'},
+        {id: '03', name: '部门03'},
+        {id: '04', name: '部门04'},
+        {id: '05', name: '部门05'},
+        {id: '06', name: '部门06'},
+        {id: '07', name: '部门07'}
+    ];
+    var grid = $("#maingrid").ligerGrid({
+        columns: [
+            { name: 'id', display: '序号', width: 100, render: function (record, rowindex, value, column) {
+                    //this     这里指向grid
+                    //record   行数据
+                    //rowindex 行索引
+                    //value    当前的值，对应record[column.name//column   列信息
+                                 return "<a href='edit.htm?id=" + value + "'>编辑</a>";
+                             }},
+            { name: 'id', display: '序号', width: 120, render: function (record, rowindex, value, column) {
+                             return '<input type="button" value="Add"/><input type="button" value="Edit"/><input type="button" value="Delete"/>';
+                         }},
+            { name: 'name', display: '名称', width: 300 }
+                 ],
+                 data: { Rows: griddata }
+             });
+</script>
+
+</body>
+</html>
